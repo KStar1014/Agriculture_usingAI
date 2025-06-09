@@ -103,7 +103,7 @@ export default function ProductDeals() {
             className="lg:col-span-2 bg-gradient-to-br from-green-700 to-green-900 text-white rounded-lg p-8 flex flex-col justify-center items-center relative overflow-hidden"
             variants={itemVariants}
           >
-            <div className="absolute inset-0 bg-[url('/images/summer-deals-bg.png')] bg-cover bg-center opacity-20"></div>
+            {/* <div className="absolute inset-0 bg-[url('/images/.png')] bg-cover bg-center opacity-20"></div> */}
             <div className="relative z-10 text-center">
               <span className="bg-yellow-400 text-green-900 font-bold px-3 py-1 rounded-full text-sm mb-4 inline-block transform -rotate-3">This week only!</span>
               <h2 className="text-4xl sm:text-5xl font-extrabold mb-2">Hot Summer DEALS</h2>
