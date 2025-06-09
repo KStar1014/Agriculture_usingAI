@@ -21,11 +21,11 @@ export default function Home() {
       <Hero />
       <TrustPartners />
       <ProductDeals />
+      <ModernFarming />
       <AIFeatures />
       <MagicAI />
       {/* <Features /> */}
       <Story />
-      <ModernFarming />
       <CTA />
       <ContactSection />
       <Footer />
