@@ -95,52 +95,71 @@ export default function ModernFarming() {
           >
             <CarouselContent>
               <CarouselItem className="md:basis-1/2 lg:basis-full">
-                <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl bg-white/10 flex items-center justify-center">
-                  <Image
-                    src="/images/robot-sprayer.jpg"
-                    alt="Agricultural Robot Sprayer"
-                    fill
-                    className="rounded-2xl object-cover"
-                    loading="eager"
-                  />
-                  <div className="absolute top-4 right-4 bg-gray-900/50 rounded-full p-2 text-white">
-                    <Heart className="w-5 h-5" />
-                  </div>
-                </div>
-              </CarouselItem>
-              
-              <CarouselItem className="md:basis-1/2 lg:basis-full">
-                <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl bg-white/10 flex items-center justify-center">
-                  <Image
-                    src="/images/robot-sprayer-2.jpg"
-                    alt="Another Agricultural Robot"
-                    fill
-                    className="rounded-2xl object-cover"
-                    loading="eager"
-                  />
-                  <div className="absolute top-4 right-4 bg-gray-900/50 rounded-full p-2 text-white">
-                    <Heart className="w-5 h-5" />
-                  </div>
-                </div>
-              </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-full">
+                <div className="space-y-4">
                   <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl bg-white/10 flex items-center justify-center">
                     <Image
-                     src="/images/robot-sprayer-3.jpg"
-                      alt="Another Agricultural Robot"
+                      src="/images/robot-sprayer.jpg"
+                      alt="Agricultural Robot Sprayer"
                       fill
                       className="rounded-2xl object-cover"
-                     loading="eager"
+                      loading="eager"
                     />
                     <div className="absolute top-4 right-4 bg-gray-900/50 rounded-full p-2 text-white">
                       <Heart className="w-5 h-5" />
                     </div>
                   </div>
-                </CarouselItem>
+                  <div className="text-center space-y-2">
+                    <h3 className="text-xl font-semibold text-white">Smart Production Robot</h3>
+                    <p className="text-gray-300">Precision spraying technology that reduces chemical usage by up to 40% while maintaining optimal crop protection.</p>
+                  </div>
+                </div>
+              </CarouselItem>
               
-              </CarouselContent>
-              {/* <CarouselPrevious /> */}
-              {/* <CarouselNext /> */}
+              <CarouselItem className="md:basis-1/2 lg:basis-full">
+                <div className="space-y-4">
+                  <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl bg-white/10 flex items-center justify-center">
+                    <Image
+                      src="/images/robot-sprayer-2.jpg"
+                      alt="Another Agricultural Robot"
+                      fill
+                      className="rounded-2xl object-cover"
+                      loading="eager"
+                    />
+                    <div className="absolute top-4 right-4 bg-gray-900/50 rounded-full p-2 text-white">
+                      <Heart className="w-5 h-5" />
+                    </div>
+                  </div>
+                  <div className="text-center space-y-2">
+                    <h3 className="text-xl font-semibold text-white">Autonomous Harvester</h3>
+                    <p className="text-gray-300">AI-powered harvesting system that identifies and picks crops at peak ripeness, maximizing yield and quality.</p>
+                  </div>
+                </div>
+              </CarouselItem>
+
+              <CarouselItem className="md:basis-1/2 lg:basis-full">
+                <div className="space-y-4">
+                  <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl bg-white/10 flex items-center justify-center">
+                    <Image
+                      src="/images/robot-sprayer-3.jpg"
+                      alt="Another Agricultural Robot"
+                      fill
+                      className="rounded-2xl object-cover"
+                      loading="eager"
+                    />
+                    <div className="absolute top-4 right-4 bg-gray-900/50 rounded-full p-2 text-white">
+                      <Heart className="w-5 h-5" />
+                    </div>
+                  </div>
+                  <div className="text-center space-y-2">
+                    <h3 className="text-xl font-semibold text-white">Soil Analysis Drone</h3>
+                    <p className="text-gray-300">Advanced aerial monitoring system that provides real-time soil health data and crop growth analytics.</p>
+                  </div>
+                </div>
+              </CarouselItem>
+              
+            </CarouselContent>
+            {/* <CarouselPrevious /> */}
+            {/* <CarouselNext /> */}
           </Carousel>
 
         </div>
