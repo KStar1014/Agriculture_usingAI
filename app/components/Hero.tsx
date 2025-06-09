@@ -4,6 +4,34 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Play, TrendingUp, Cpu } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+import useIntersectionObserver from '@react-hook/intersection-observer'
+import { useRef } from 'react'
+
+const LazyIframe = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const lockRef = useRef<boolean>(false)
+  const { isIntersecting } = useIntersectionObserver(containerRef)
+  if (isIntersecting) {
+    lockRef.current = true
+  }
+  return (
+    <div ref={containerRef}>
+      {lockRef.current && (
+        <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute min-w-full min-h-full object-cover lazy"
+        style={{ filter: 'brightness(0.8)' }}
+      >
+        <source src="https://idoxdeu.sufydely.com/hero-background.mp4" type="video/mp4" />
+      </video>
+      )}
+    </div>
+  )
+}
+
 export default function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -31,16 +59,17 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-br from-green-50 to-blue-50 pt-16">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <video
+        <LazyIframe />
+        {/* <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute min-w-full min-h-full object-cover"
+          className="absolute min-w-full min-h-full object-cover lazy"
           style={{ filter: 'brightness(0.8)' }}
         >
           <source src="https://idoxdeu.sufydely.com/hero-background.mp4" type="video/mp4" />
-        </video>
+        </video> */}
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/70 to-blue-900/70"></div>
       </div>
 
