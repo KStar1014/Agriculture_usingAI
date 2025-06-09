@@ -15,7 +15,7 @@ export default function ChatbotIcon() {
   return (
     <>
       <motion.div
-        className="fixed bottom-8 right-8 z-50 bg-green-600 text-white rounded-full p-4 shadow-lg cursor-pointer"
+        className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-green-600 to-green-400 text-white rounded-full p-4 shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{

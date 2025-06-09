@@ -2,18 +2,42 @@
 
 import { Button } from '@/components/ui/button';
 import { Play, CheckCircle, Users, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Story() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.35 } },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
   return (
     <section id="about" className="py-24 bg-gradient-to-r from-green-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <img
+          <motion.div 
+            className="p-2"
+            variants={containerVariants}
+          >
+          <div className="relative w-full mx-auto">
+            <Image
+              src="https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="AI in Agriculture"
+              width={1200}
+              height={675}
+              loading='eager'
+              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110 rounded-2xl shadow-xl"
+            />
+            {/* <img
               src="https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Sustainable farming technology"
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
-            />
+            /> */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
             <Button 
               size="lg" 
@@ -23,7 +47,15 @@ export default function Story() {
               Watch Our Story
             </Button>
           </div>
+          </motion.div>
 
+          <motion.div 
+            className=""
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
@@ -70,6 +102,7 @@ export default function Story() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
+          </motion.div>
         </div>
       </div>
     </section>

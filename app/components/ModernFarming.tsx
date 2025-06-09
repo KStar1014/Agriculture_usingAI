@@ -14,7 +14,6 @@ import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 
 export default function ModernFarming() {
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
@@ -73,6 +72,12 @@ export default function ModernFarming() {
         </motion.div>
 
         {/* Bottom Section: Robot Image and Vertical Pills */}
+        <motion.div 
+          className=""
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center lg:space-x-8">
           <Carousel
             opts={{
@@ -136,9 +141,10 @@ export default function ModernFarming() {
               </CarouselContent>
               {/* <CarouselPrevious /> */}
               {/* <CarouselNext /> */}
-            </Carousel>
+          </Carousel>
 
         </div>
+        </motion.div>
       </div>
     </section>
   );

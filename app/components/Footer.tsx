@@ -1,73 +1,86 @@
 'use client';
 
+import Image from 'next/image';
 import { Twitter, Facebook, Instagram, Youtube, Home } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.1 } },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="text-2xl font-bold">
-              Agri<span className="text-green-600">AI</span>
-            </div>
-            <p className="text-gray-400">
-              Transforming agriculture through the power of artificial intelligence and sustainable farming practices.
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div variants={itemVariants}>
+            <h3 className="text-lg font-semibold text-white mb-4">AgriAI</h3>
+            <p className="text-sm leading-relaxed">
+              Innovating for a sustainable agricultural future with AI-powered solutions.
             </p>
-            <div className="flex space-x-4 pt-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-green-500 transition-colors duration-200">Home</a></li>
+              <li><a href="#features" className="hover:text-green-500 transition-colors duration-200">Features</a></li>
+              <li><a href="#about" className="hover:text-green-500 transition-colors duration-200">About Us</a></li>
+              <li><a href="#contact" className="hover:text-green-500 transition-colors duration-200">Contact</a></li>
+            </ul>
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-green-500 transition-colors duration-200">FAQ</a></li>
+              <li><a href="#" className="hover:text-green-500 transition-colors duration-200">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-green-500 transition-colors duration-200">Terms of Service</a></li>
+            </ul>
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <h3 className="text-lg font-semibold text-white mb-4">Connect With Us</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-green-500 transition-colors duration-200">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-green-500 transition-colors duration-200">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-green-500 transition-colors duration-200">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-green-500 transition-colors duration-200">
+                <Home className="w-6 h-6" /> {/* Using Home icon for TikTok as a placeholder */}
+              </a>
+              <a href="#" className="text-gray-400 hover:text-green-500 transition-colors duration-200">
                 <Youtube className="w-6 h-6" />
               </a>
-              {/* TikTok icon is not directly available in lucide-react, using a generic home icon for now */}
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Home className="w-6 h-6" />
-              </a>
             </div>
-          </div>
-          
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Solutions</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Crop Monitoring</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Precision Farming</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Yield Prediction</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Resource Optimization</a></li>
-            </ul>
-          </div>
-          
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Company</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-            </ul>
-          </div>
-          
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Support</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">API Reference</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Status</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 AgriAI. All rights reserved. Built with the future of agriculture in mind.</p>
-        </div>
+          </motion.div>
+        </motion.div>
+        <motion.div 
+          className="border-t border-gray-700 pt-8 text-center text-sm"
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <p>&copy; {new Date().getFullYear()} AgriAI. All rights reserved.</p>
+        </motion.div>
       </div>
     </footer>
   );
