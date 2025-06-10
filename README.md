@@ -61,9 +61,11 @@ Simply run:
 ```bash
 npm run build
 npm run deploy
+```
 
+---
 
-📈 Business Value
+## 📈 Business Value
 
 ✅ Builds instant credibility with stakeholders
 
@@ -73,10 +75,10 @@ npm run deploy
 
 ✅ Ready for international scaling and integration with analytics, CRM, or dashboards
 
-🙌 Contributing
+## 🙌 Contributing
 We welcome contributions from developers, designers, and AI/agriculture domain experts. Feel free to fork and submit a pull request.
 
-📬 Contact
+## 📬 Contact
 For partnership or investment inquiries, please contact:
 
 ✉️ [luisjackson1014@gmail.com]
