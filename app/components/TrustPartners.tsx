@@ -3,32 +3,59 @@
 import React from 'react';
 import { Building2, Leaf, Factory, Truck, Wheat, Sprout } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function TrustPartners() {
   const trustPartners = [
     {
-      name: "AgriTech Solutions",
-      icon: <Building2 className="w-8 h-8" />
+      name: "John Deere",
+      logo: "/images/partners/john-deere.png",
+      alt: "John Deere Logo"
     },
     {
-      name: "FarmForward",
-      icon: <Leaf className="w-8 h-8" />
+      name: "Monsanto",
+      logo: "/images/partners/monsanto.png",
+      alt: "Monsanto Logo"
     },
     {
-      name: "GreenTech Industries",
-      icon: <Factory className="w-8 h-8" />
+      name: "Syngenta",
+      logo: "/images/partners/syngenta.png",
+      alt: "Syngenta Logo"
     },
     {
-      name: "Smart Farming Co",
-      icon: <Truck className="w-8 h-8" />
+      name: "Bayer CropScience",
+      logo: "/images/partners/bayer.png",
+      alt: "Bayer CropScience Logo"
     },
     {
-      name: "TechHarvest",
-      icon: <Wheat className="w-8 h-8" />
+      name: "Corteva",
+      logo: "/images/partners/corteva.png",
+      alt: "Corteva Logo"
     },
     {
-      name: "AgriInnovate",
-      icon: <Sprout className="w-8 h-8" />
+      name: "CNH Industrial",
+      logo: "/images/partners/cnh.png",
+      alt: "CNH Industrial Logo"
+    },
+    {
+      name: "AGCO",
+      logo: "/images/partners/agco.png",
+      alt: "AGCO Logo"
+    },
+    {
+      name: "Kubota",
+      logo: "/images/partners/kubota.png",
+      alt: "Kubota Logo"
+    },
+    {
+      name: "Yara",
+      logo: "/images/partners/yara.png",
+      alt: "Yara Logo"
+    },
+    {
+      name: "BASF",
+      logo: "/images/partners/basf.png",
+      alt: "BASF Logo"
     }
   ];
 
@@ -88,12 +115,14 @@ export default function TrustPartners() {
                 className="inline-flex items-center justify-center p-4 mx-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
                 variants={itemVariants}
               >
-                <span className="text-green-600 group-hover:text-green-700 transition-colors mr-3">
-                  {partner.icon}
-                </span>
-                <span className="text-gray-800 font-semibold text-lg">
-                  {partner.name}
-                </span>
+                <div className="relative w-24 h-12">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </motion.div>
             ))}
           </motion.div>
