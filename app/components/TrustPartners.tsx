@@ -29,7 +29,7 @@ export default function TrustPartners() {
     },
     {
       name: "Corteva",
-      logo: "/images/partners/corteva.png",
+      logo: "/images/partners/avici.png",
       alt: "Corteva Logo"
     },
     {
@@ -39,7 +39,7 @@ export default function TrustPartners() {
     },
     {
       name: "AGCO",
-      logo: "/images/partners/agco.png",
+      logo: "/images/partners/bayer.png",
       alt: "AGCO Logo"
     },
     {
@@ -49,12 +49,12 @@ export default function TrustPartners() {
     },
     {
       name: "Yara",
-      logo: "/images/partners/yara.png",
+      logo: "/images/partners/john-deere.png",
       alt: "Yara Logo"
     },
     {
       name: "BASF",
-      logo: "/images/partners/basf.png",
+      logo: "/images/partners/cnh.png",
       alt: "BASF Logo"
     }
   ];
@@ -115,12 +115,13 @@ export default function TrustPartners() {
                 className="inline-flex items-center justify-center p-4 mx-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
                 variants={itemVariants}
               >
-                <div className="relative w-24 h-12">
+                <div className="relative w-32 h-16">
                   <Image
                     src={partner.logo}
                     alt={partner.alt}
                     fill
                     className="object-contain"
+                    loading='eager'
                   />
                 </div>
               </motion.div>
