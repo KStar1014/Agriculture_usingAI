@@ -26,7 +26,8 @@ const LazyIframe = () => {
         style={{ filter: 'brightness(0.8)' }}
       >
         {/* <source src="https://idoxdeu.sufydely.com/hero-background.mp4" type="video/mp4" /> */}
-        <source src="/videos/hero-background.mp4" type="video/mp4" />
+        {/* <source src="/videos/hero-background.mp4" type="video/mp4" /> */}
+        <source src="https://agri-object.mos.ap-southeast-2.sufybkt.com/hero-background.mp4" type="video/mp4" />
       </video>
       )}
     </div>
